@@ -11,17 +11,22 @@
     <title>Document</title>
 </head>
 <body class="bg-slate-100 flex p-10 font-poppins flex-col">
-  <nav class="border-b flex justify-between w-11/12 mx-auto">
-    <ul class="flex text-yellow-950">
-      <li class="font-extralight px-5 uppercase cursor-pointer hover:underline">Exhibition</li>
-      <li class="font-extralight px-5 uppercase cursor-pointer hover:underline">life</li>
-      <li class="font-extralight px-5 uppercase cursor-pointer hover:underline">artists</li>
-    </ul>
-    <h2 class="text-yellow-950 font-extralight px-5 uppercase text-2xl">art echo</h2>
-  </nav>
-  <section class="flex gap-20 items-start">
-
-  </section>
+  <div class="container w-11/12 mx-auto">
+    <nav class="border-b flex flex-col-reverse md:flex-row items-center justify-between  mb-20">
+      <ul class="flex text-yellow-950">
+        <li class="font-extralight px-5 uppercase cursor-pointer hover:underline">Exhibition</li>
+        <li class="font-extralight px-5 uppercase cursor-pointer hover:underline">life</li>
+        <li class="font-extralight px-5 uppercase cursor-pointer hover:underline">artists</li>
+      </ul>
+      <h2 class="text-yellow-950 font-extralight px-5 uppercase text-2xl">art echo</h2>
+    </nav>
+    <section class="grid gap-10 md:grid-cols-4">
+      <img src="assets/blur_person.png" alt="" class="self-center rounded-md border border-slate-200 p-1 shadow-2xl">
+      <img src="assets/car_light.png" alt="" class="self-end rounded-md border border-slate-200 p-1 shadow-2xl">
+      <img src="assets/cards.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-2xl">
+      <img src="assets/couple.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-2xl">
+    </section>
+  </div>
     <!-- <script src="app.js"></script> -->
 </body>
 </html>
