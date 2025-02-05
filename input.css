@@ -4,3 +4,21 @@
     --font-poppins: Poppins, sans-serif;
     --color-avocado-500: rgb(50, 168, 82);
 }
+
+/* @layer components {
+    img {
+        border: 5px solid red;
+    } 
+} */
+
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+}
