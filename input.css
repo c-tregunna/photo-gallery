@@ -14,7 +14,9 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
   }
-  .max-height {
-    @apply h-[310px] object-contain
+  .nav-items {
+    @apply font-extralight px-5 uppercase cursor-pointer hover:underline;
   }
+
+
 }

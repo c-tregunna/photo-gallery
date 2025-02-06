@@ -182,7 +182,7 @@ document.addEventListener("wheel", (event) => {
   images.forEach((image) => {
     exhibitionGallery.innerHTML +=`
     <div class="self-center flex flex-col" >
-      <img src="${image.src}" alt="${image.description}" class="rounded-md border border-slate-200 p-1 shadow-lg md:max-h-[310px]" data-index="${image.index}">
+      <img src="${image.src}" alt="${image.description}" class="rounded-md border border-slate-200 p-1 shadow-lg md:max-h-[310px] cursor-pointer" data-index="${image.index}">
     </div>`
   })
 
