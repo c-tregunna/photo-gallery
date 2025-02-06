@@ -10,7 +10,7 @@
 
     <title>ART ECHO</title>
 </head>
-<body class="bg-slate-100 flex p-10 font-poppins flex-col">
+<body class="bg-slate-100 flex p-10 font-poppins flex-col relative">
   <div class="container w-11/12 mx-auto">
     <nav class="border-b flex flex-col-reverse md:flex-row items-center justify-between mb-10">
       <ul class="flex text-yellow-950">
@@ -21,71 +21,12 @@
       <h2 class="text-yellow-950 font-extralight px-5 uppercase text-2xl">art echo</h2>
     </nav>
     
-    <section class="overflow-x-auto md:overflow-x-scroll md:overflow-y-hidden py-4 px-2 no-scrollbar" id="exhibition-gallery">
-      <div class="grid gap-2 md:grid-cols-[repeat(11,minmax(250px,1fr))] md:grid-rows-[320px_320px] md:w-[200%] items-start">
-        <div class="row-span-2 h-full flex items-center justify-center border-r mr-20">
-          <h2 class="md:rotate-270 uppercase text-3xl md:text-8xl md:pb-10 font-thin text-gray-400">exhibition</h2>
+    <section class="overflow-x-auto md:overflow-x-scroll md:overflow-y-hidden py-4 px-2 no-scrollbar" id="exhibition-gallery-outer">
+      <div class="grid gap-2 md:grid-cols-[repeat(11,minmax(250px,1fr))] md:grid-rows-[320px_320px] md:w-[200%] items-start" id="exhibition-gallery">
+        <div class="row-span-2 h-full flex items-center justify-center md:border-r md:mr-20">
+          <h2 class="md:rotate-270 uppercase text-3xl md:text-8xl md:pb-10 font-extralight md:font-thin text-gray-500">exhibition</h2>
         </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/blur_person.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/car_light.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/cards.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/couple.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit ">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/figure.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/flower.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/hat.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/heart.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/lights.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/lines.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/puffball.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/road.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/sea.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/shadows.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/stairs.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/sunglasses.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/swirl.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/television.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit">
-        </div>
-        <div class="self-center justify-self-center flex flex-col">
-          <img src="assets/two_tone.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg max-height w-fit">
-        </div>
-        <div class="self-center flex flex-col">
-          <img src="assets/upwards.png" alt="" class="rounded-md border border-slate-200 p-1 shadow-lg ">
-        </div>
+        <!-- photos added from photos.js -->
       </div>
     </section>
     
@@ -93,6 +34,10 @@
       <p class="uppercase font-extralight ">art echo &copy;2025</p>
     </footer>
   </div>
-    <script src="app.js" type="module"></script>
+  <div id="modal" class="z-20 w-full h-full fixed top-0 left-0 hidden bg-[rgba(0,0,0,.7)] justify-center items-center flex-col">
+    <div class="text-4xl p-4 top-0 md:top-20 md:right-20 absolute text-slate-100 cursor-pointer" id="modal-close">X</div>
+    <div id="modal-content" class="w-11/12 md:w-8/12 bg-slate-100 max-w-[700px] mt-10"></div>
+  </div>
+    <script src="app.js"></script>
 </body>
 </html>
