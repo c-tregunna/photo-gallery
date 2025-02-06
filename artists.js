@@ -85,7 +85,7 @@ const artistGallery = document.getElementById('artist-gallery')
 
 artists.forEach((artist) => {
     artistGallery.innerHTML += `
-        <div class="flex flex-col border-b border-b-slate-200 py-6 text-lg lg:flex-row md:justify-between w-10/12 mx-auto">
+        <div class="flex flex-col border-b border-b-slate-200 py-6 text-lg lg:flex-row md:justify-between w-10/12 mx-auto last:border-b-0">
             <div>
                 <p><span class="font-medium">Name:</span> <span class="italic font-thin">${artist.name}</span></p>
                 <p><span class="font-medium">Born:</span> <span class="italic font-thin">${artist.countryBorn}</span></p>

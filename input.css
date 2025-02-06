@@ -17,6 +17,4 @@
   .nav-items {
     @apply font-extralight px-5 uppercase cursor-pointer hover:underline;
   }
-
-
 }
