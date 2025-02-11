@@ -20,22 +20,24 @@
       </ul>
       <h2 class="text-yellow-950 font-extralight px-5 uppercase text-2xl">art echo</h2>
     </nav>
+    <div class="flex items-start justify-center md:border-r mr-2 md:w-1/12 md:absolute md:h-[690px] bg-slate-100 z-10 md:pt-50 md:mb-32">
+      <h2 class="md:rotate-270 uppercase text-3xl md:text-8xl font-extralight md:font-thin text-yellow-900 md:pr-24 ">exhibition</h2>
+    </div>
     
     <section class="overflow-x-auto md:overflow-x-scroll md:overflow-y-hidden py-4 px-2 no-scrollbar" id="exhibition-gallery-outer">
-
-      <div class="grid gap-2 md:grid-cols-[repeat(11,minmax(250px,1fr))] md:grid-rows-[minmax(200px,34vh)_minmax(200px,34vh)] md:w-[200%] items-start" id="exhibition-gallery">
-        <div class="row-span-2 h-full flex items-start justify-center md:border-r md:mr-20 md:pt-40">
+      <div class="grid gap-8 md:grid-cols-[repeat(10,minmax(250px,1fr))] md:grid-rows-[minmax(200px,34vh)_minmax(200px,34vh)] md:w-[200%] items-start md:ml-40" id="exhibition-gallery">
+        <!-- <div class="row-span-2 h-full flex items-start justify-center md:border-r md:mr-20 md:pt-40">
           <h2 class="md:rotate-270 uppercase text-3xl md:text-8xl md:pb-10 font-extralight md:font-thin text-yellow-900">exhibition</h2>
-        </div>
+        </div> -->
         <!-- photos added from photos.js -->
       </div>
     </section>
     
-    <footer class="border-t flex justify-center mt-8 pt-2">
+    <footer class="border-t flex justify-center mt-8 pt-2 z-20 h-20">
       <p class="uppercase font-extralight ">art echo &copy;2025</p>
     </footer>
   </div>
-  <div id="modal" class="z-20 w-full h-full fixed top-0 left-0 hidden bg-gray-opaque justify-center items-center flex-col">
+  <div id="modal" class="z-30 w-full h-full fixed top-0 left-0 hidden bg-gray-opaque justify-center items-center flex-col">
     <div class="text-4xl p-4 top-0 md:top-20 md:right-20 absolute text-slate-100 cursor-pointer" id="modal-close">X</div>
     <div id="modal-content" class="w-11/12 md:w-10/12 bg-slate-100 max-w-[800px] max-h-[750px]">
       <!-- data added from app.js -->

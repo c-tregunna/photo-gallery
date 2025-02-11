@@ -305,16 +305,15 @@ exhibitionGallery.addEventListener('click', (e) => {
                 <p class="mb-1"><span class="font-medium">Category:</span> <span class="italic font-thin">${currentImage.category}</span></p>
                 <p class="mb-1"><span class="font-medium">Camera:</span> <span class="italic font-thin">${currentImage.camera}</span></p>
                 <p class="mb-1"><span class="font-medium">Description:</span> <span class="italic font-thin">${currentImage.description}</span></p>
-                <div class="flex justify-between">
-                  <p class="mb-1"><span class="font-medium">Focal Length:</span> <span class="italic font-thin">${currentImage.focalLength}</span></p>
-                  <p class="mb-1"><span class="font-medium">ISO:</span> <span class="italic font-thin">${currentImage.ISO}</span></p>
-                  <p class="mb-1"><span class="font-medium">Shutter Speead:</span> <span class="italic font-thin">${currentImage.shutterSpeed}</span></p>
-                  <p class="mb-1"><span class="font-medium">Aperture:</span> <span class="italic font-thin">${currentImage.aperture}</span></p>
-                </div>
-
             </div>
             <div class="grow">
-              <img src="${currentImage.src}" class=" max-h-[500px] rounded-md border border-slate-200 p-1 shadow-2xl mx-auto mt-4">
+                <img src="${currentImage.src}" class=" max-h-[500px] rounded-md border border-slate-200 p-1 shadow-2xl mx-auto my-2">
+            </div>
+            <div class="flex justify-around mt-2 text-xs ">
+                <p><span class="font-medium">Focal Length:</span> <span class="italic font-thin">${currentImage.focalLength}</span></p>
+                <p><span class="font-medium">ISO:</span> <span class="italic font-thin">${currentImage.ISO}</span></p>
+                <p><span class="font-medium">Shutter Speed:</span> <span class="italic font-thin">${currentImage.shutterSpeed}</span></p>
+                <p><span class="font-medium">Aperture:</span> <span class="italic font-thin">${currentImage.aperture}</span></p>
             </div>
         </div>
     `
