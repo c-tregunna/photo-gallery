@@ -307,13 +307,13 @@ exhibitionGallery.addEventListener('click', (e) => {
                 <p class="mb-1"><span class="font-medium">Description:</span> <span class="italic font-thin">${currentImage.description}</span></p>
             </div>
             <div class="grow">
-                <img src="${currentImage.src}" class=" max-h-[500px] rounded-md border border-slate-200 p-1 shadow-2xl mx-auto my-2">
+                <img src="${currentImage.src}" class="max-h-[500px] mx-auto my-4">
             </div>
             <div class="flex justify-around mt-2 text-xs ">
-                <p><span class="font-medium">Focal Length:</span> <span class="italic font-thin">${currentImage.focalLength}</span></p>
-                <p><span class="font-medium">ISO:</span> <span class="italic font-thin">${currentImage.ISO}</span></p>
-                <p><span class="font-medium">Shutter Speed:</span> <span class="italic font-thin">${currentImage.shutterSpeed}</span></p>
-                <p><span class="font-medium">Aperture:</span> <span class="italic font-thin">${currentImage.aperture}</span></p>
+                <p class="bg-slate-200 px-4 py-2 rounded-3xl"><span class="font-medium ">Focal Length:</span> <span class="italic font-thin">${currentImage.focalLength}</span></p>
+                <p class="bg-slate-200 px-4 py-2 rounded-3xl"><span class="font-medium">ISO:</span> <span class="italic font-thin">${currentImage.ISO}</span></p>
+                <p class="bg-slate-200 px-4 py-2 rounded-3xl"><span class="font-medium">Shutter Speed:</span> <span class="italic font-thin">${currentImage.shutterSpeed}</span></p>
+                <p class="bg-slate-200 px-4 py-2 rounded-3xl"><span class="font-medium">Aperture:</span> <span class="italic font-thin">${currentImage.aperture}</span></p>
             </div>
         </div>
     `
@@ -323,3 +323,8 @@ exhibitionGallery.addEventListener('click', (e) => {
 modalCloseBtn.addEventListener('click', ()=> {
   modalContainer.classList.add('hidden')
 })
+
+// let screenHeight = screen.height
+// if(screenHeight < 1000) {
+//   document.getElementById('header-container').style.height = "640px"
+// }
