@@ -24,7 +24,4 @@
   .blog-dates {
     @apply mb-6 font-light;
   }
-  .exhibition-calc {
-    height: calc(100% - 4px);
-  }
 }
