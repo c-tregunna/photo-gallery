@@ -952,6 +952,13 @@
       }
     }
   }
+  .hover\:text-yellow-950 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-yellow-950);
+      }
+    }
+  }
   .hover\:opacity-100 {
     &:hover {
       @media (hover: hover) {

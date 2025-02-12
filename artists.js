@@ -109,8 +109,9 @@ artists.forEach((artist) => {
               </div>
               <img src="${artist.mostFamousPiece}" class="w-full md:h-[200px] md:w-auto rounded-md border border-slate-200 p-1 shadow-2xl md:ml-4">
             </div>
-            <div class="flex w-full justify-center pt-2">
-              <i class="fa-solid fa-angle-down text-3xl text-slate-400 hover:animate-bounce cursor-pointer p-2" id="see-more" data-index="${artist.id}"></i>
+            <div class="flex flex-col w-full items-center pt-2">
+              <i class="fa-solid fa-angle-down text-3xl text-slate-400 hover:text-yellow-950 cursor-pointer px-2" id="see-more" data-index="${artist.id}"></i>
+              <p class="text-slate-400 text-xs cursor-pointer hover:text-yellow-950 " id="see-more-text" data-index="${artist.id}">See More</p>
             </div>
         </div>
     `
@@ -136,23 +137,25 @@ artists.forEach((artist) => {
 // thank ChatGPT for tweaks
 
 artistGallery.addEventListener('click', function(e) {
-  if (e.target.tagName === "I") {
-    let artistIndex = Number(e.target.dataset.index);
+  if (e.target.id === "see-more-text" || e.target.tagName === "I") {
+    console.log('clicked');
+    let artistIndex = Number(e.target.dataset.index ); // Ensure we get the correct data-index
+    
     const currentArtist = artists.find(artist => artist.id === artistIndex);
     
     if (currentArtist) {
       console.log(currentArtist);
-
-      // Find the specific bio of the clicked artist
+      
       const artistBio = document.querySelector(`#bio-${artistIndex}`);
-
+      
       if (artistBio) {
-        // Toggle the 'line-clamp-2' class on the correct bio element
+        console.log('Bio found:', artistBio); // Log bio element
         artistBio.classList.toggle('line-clamp-2');
-      } 
-    } 
+      }
+    }
   }
-});
+})
+
 
 
   
