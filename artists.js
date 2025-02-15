@@ -95,7 +95,6 @@ const artists = [
   
 const artistGallery = document.getElementById('artist-gallery')
 
-
 artists.forEach((artist) => {
     artistGallery.innerHTML += `
         <div class="flex flex-col border-b border-b-slate-200 py-6 text-lg w-10/12 mx-auto last:border-b-0">
@@ -109,46 +108,23 @@ artists.forEach((artist) => {
               </div>
               <img src="${artist.mostFamousPiece}" class="w-full md:h-[200px] md:w-auto rounded-md border border-slate-200 p-1 shadow-2xl md:ml-4">
             </div>
-            <div class="flex flex-col w-full items-center pt-2">
-              <i class="fa-solid fa-angle-down text-3xl text-slate-400 hover:text-yellow-950 duration-300 cursor-pointer px-2" id="see-more" data-index="${artist.id}"></i>
+            <div class="flex flex-col w-full items-center pt-2 mt-2 md:mt-0 ">
+              <i class="fa-solid fa-angle-down text-xl text-slate-400 hover:text-yellow-950 duration-300 cursor-pointer px-3" id="see-more" data-index="${artist.id}"></i>
               <p class="text-slate-400 text-xs cursor-pointer hover:text-yellow-950 duration-300" id="see-more-text" data-index="${artist.id}">See More</p>
             </div>
         </div>
     `
 }) 
 
-// const artistBio = document.getElementById('artist-bio')
-
-// artistGallery.addEventListener('click', function(e) {
-
-//   if(e.target.tagName === "I") {
-//     let artistIndex = Number(e.target.dataset.index)
-//     const currentArtist = artists.find(artist => artist.id === artistIndex)
-//     if(currentArtist) {
-//       const artistBio = document.getElementById('artist.id')
-//       console.log(currentArtist)
-//       artistBio.classList.toggle('line-clamp-2')
-//     } else {
-//       console.log('nopoe')
-//     }
-//   }
-// })
-
 // thank ChatGPT for tweaks
 artistGallery.addEventListener('click', function(e) {
   if (e.target.id === "see-more-text" || e.target.tagName === "I") {
-    console.log('clicked');
-    let artistIndex = Number(e.target.dataset.index ); // Ensure we get the correct data-index
-    
-    const currentArtist = artists.find(artist => artist.id === artistIndex);
-    
+    let artistIndex = Number(e.target.dataset.index ); // Ensure we get the correct data-index  
+    const currentArtist = artists.find(artist => artist.id === artistIndex);    
     if (currentArtist) {
-      console.log(currentArtist);
-      
       const artistBio = document.querySelector(`#bio-${artistIndex}`);
-      
       if (artistBio) {
-        console.log('Bio found:', artistBio); // Log bio element
+        // console.log('Bio found:', artistBio); // Log bio element
         artistBio.classList.toggle('line-clamp-2');
       }
     }
